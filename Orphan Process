@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<unistd.h>
+int main(){
+int pid = fork();
+if(pid>0){
+printf("In parent Process, pid = %d", pid);
+}
+else{
+sleep(10);
+printf("In child process, pid = %d\n", pid);
+printf("Child process has become an orphan process and has
+finished execution now.");
+}
+return 0;
+}
